@@ -14,10 +14,6 @@ app.use(express.json());
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
-//DATA
-// =============================================================================
-require("./app/data/friends")(app);
-
 // LISTENER - Start the server
 // =============================================================================
 app.listen(PORT, function() {

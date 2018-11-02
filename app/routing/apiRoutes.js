@@ -18,15 +18,11 @@ module.exports = function(app) {
 // POST Request
 // ---------------------------------------------------------------------------
   app.post("/api/friends", function(req, res) {
-
     console.log(req.body);
-    // if (tableData.length < 5) {
-    //   tableData.push(req.body);
-    //   res.json(true);
-    // }
-    // else {
-    //   waitListData.push(req.body);
-    //   res.json(false);
-    // }
-  });
-};
+    friendData.push(req.body);
+    res.json(friendData[Math.floor(Math.random() * friendData.length)]);
+
+    //NEED TO BUILD MATCHING ALGO
+
+});
+}
